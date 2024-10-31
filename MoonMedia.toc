@@ -1,0 +1,22 @@
+## Interface: 110005
+## Title: |cff33ff99MoonMedia|r
+## Version: 1.0
+## SavedVariables: MoonMediaDB
+## Author: River
+## Notes: Sounds that won't make you crazier
+## DefaultState: Enabled
+## IconTexture: Interface\AddOns\MoonMedia\Logo
+
+Libs\LibStub.lua
+Libs\CallbackHandler-1.0.lua
+Libs\AceConfig-3.0.lua
+Libs\AceConfigCmd-3.0.lua
+Libs\AceConfigDialog-3.0.lua
+Libs\AceConfigRegistry-3.0.lua
+Libs\LibSharedMedia-3.0.lua
+Libs\Taintless.xml
+
+Config\Settings.lua
+Config\Options.lua
+
+Core\Main.lua
