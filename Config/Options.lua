@@ -3,16 +3,14 @@ local Name, T = ...
 
 local ShowPopup = false
 
-StaticPopupDialogs[MOON_CONFIG_RL] = {
+StaticPopupDialogs["MOON_CONFIG_RL"] = {
 	text = "One or more of the changes you have made require you to reload your user interface.",
 	button1 = ACCEPT,
 	button2 = CANCEL,
-	OnAccept = C_UI.Reload(),
+	OnAccept = ReloadUI,
 	whileDead = 1,
 	hideOnEscape = false
 }
-
--- StaticPopup_Show("MOON_CONFIG_RL")
 
 ---@class Options
 T.Options = {
@@ -27,15 +25,15 @@ T.Options = {
             get = function(info) return T.db.sets[info[#info]] end,
             set = function(info, value) T.db.sets[info[#info]] = value; ShowPopup = true end,
             args = {
-                loud = {
-                    desc = "Include sounds from Super Mario Brothers.  This may or may not cause brain damage.",
-                    name = "Loud",
+                red = {
+                    desc = "Sounds customized by Red.",
+                    name = "Red",
                     order = 0,
                     type = "toggle"
                 },
-                subtle = {
-                    desc = "Include sounds guaranteed not to melt your brain.",
-                    name = "Subtle",
+                mario = {
+                    desc = "Sounds from Super Mario Brothers.",
+                    name = "Super Mario",
                     order = 1,
                     type = "toggle"
                 }
@@ -43,3 +41,10 @@ T.Options = {
         }
     }
 }
+
+hooksecurefunc(SettingsPanel, "Close", function()
+    if ShowPopup then
+        StaticPopup_Show("MOON_CONFIG_RL")
+        ShowPopup = false
+    end
+end)

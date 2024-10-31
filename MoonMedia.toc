@@ -19,4 +19,5 @@ Libs\Taintless.xml
 Config\Settings.lua
 Config\Options.lua
 
+Core\Sounds.lua
 Core\Main.lua

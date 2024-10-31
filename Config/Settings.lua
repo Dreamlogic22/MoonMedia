@@ -1,10 +1,10 @@
 ---@type string, MoonMedia
-local Name, T = ...
+local _, T = ...
 
 ---@class Settings
 T.Defaults = {
     sets = {
-        loud = false,
-        subtle = true
+        mario = false,
+        red = true
     }
 }
