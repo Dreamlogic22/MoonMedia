@@ -1,0 +1,5 @@
+package-as: MoonMedia
+
+ignore:
+  - .vscode
+  - .github
