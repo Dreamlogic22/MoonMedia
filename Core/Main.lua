@@ -3,13 +3,13 @@ local Name, T = ...
 local LSM = LibStub("LibSharedMedia-3.0")
 
 local function LoadMedia()
-    local ListPrefix = "|TInterface\\AddOns\\MoonMedia\\Logo.tga:16:16:0:0:50:50:4:46:4:46|t"
-    local Path = [[Interface\AddOns\MoonMedia\]]
+    local ListPrefix = [[|TInterface\AddOns\MoonMedia\Media\%s\Tag.tga:16:16:0:0:50:50:4:46:4:46|t%s]]
+    local Path = [[Interface\AddOns\MoonMedia\Media\%s\%s]]
 
     for setName in next, T.Sounds do
         if T.db.sets[setName] then
             for _, info in ipairs(T.Sounds[setName]) do
-                LSM:Register("sound", ListPrefix .. info.key, Path .. info.file)
+                LSM:Register("sound", format(ListPrefix, setName, info.key), format(Path, setName, info.file))
             end
         end
     end
