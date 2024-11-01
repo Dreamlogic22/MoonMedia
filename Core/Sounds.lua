@@ -1,5 +1,5 @@
 ---@type string, MoonMedia
-local Name, T = ...
+local _, T = ...
 
 ---@class SoundList
 T.Sounds = {

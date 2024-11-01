@@ -27,7 +27,7 @@ T.Options = {
             args = {
                 red = {
                     desc = "Sounds customized by Red.",
-                    name = "Red",
+                    name = "Red Alerts",
                     order = 0,
                     type = "toggle"
                 },
