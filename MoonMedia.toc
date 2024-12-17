@@ -1,6 +1,6 @@
 ## Interface: 110007
 ## Title: |cff33ff99MoonMedia|r
-## Version: 1.0
+## Version: 1.1
 ## SavedVariables: MoonMediaDB
 ## Author: River
 ## Notes: Sounds that won't make you crazier
