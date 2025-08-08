@@ -1,4 +1,4 @@
-## Interface: 110107
+## Interface: 110200
 ## Title: |cff33ff99MoonMedia|r
 ## Version: 1.2
 ## SavedVariables: MoonMediaDB
